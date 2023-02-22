@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/moviethingyCSS/style.css">
+    <link rel="stylesheet" href="/moviethingy/CSS/moviedetails.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+
+<body>
+
+
+
+    <header class="container header__container grid ">
+        <div class="header__div">
+            <a class="home__header header__detail" href="index.html">Home</a>
+            <a class="search__header header__detail" href="search.html">Search</a>
+            <a class="favourites__header header__detail" href="favourites.html">Favourites</a>
+        </div>
+
+
+    </header>
+
+    <main class="container main__container grid ">
+
+        <h1>Movie details</h1>
+        <img class="poster__main" id="poster"> </img>
+        <div class="note movie__info">
+        <h2 id="title">Title: </h2>
+
+        <h2 id="year">Release year: </h2>
+        <h2 id="rated">Rated: </h2>
+        <h2 id="released">Released: </h2>
+        <h2 id="runtime">Runtime: </h2>
+        <h2 id="genre">Genre: </h2>
+        <h2 id="director">Director: </h2>
+        <h2 id="writer">Writer: </h2>
+        <h2 id="actors">Actors: </h2>
+        <h2 id="plot">Plot: </h2>
+        <h2 id="language">Release language: </h2>
+        <h2 id="country">Country: </h2>
+        <h2 id="awards">Awards: </h2>
+
+
+        <h2 id="imdbRating">IMDB rating: </h2>
+
+        <h2 class="imdb" id="imdbID">IMDB ID: </h2>
+
+        </div>
+
+    </main>
+
+    <footer class="container footer__container grid ">
+
+    </footer>
+
+</body>
+<!-- Kopplar på javascripten som fanns sedan tidigare OCH kör en javascript utan extra fil
+utan i samma fil som denna. Anledningen är att jag vill inte skriva in API nyckeln 
+på fler ställen så vill använda samma men också separera de sakerna som bara hade 
+med denna sidan att göra. -->
+<script type="text/javascript" src="/script.js"></script>
+<script>
+    // Hämta parametern från urlen
+    const urlParams = new URLSearchParams(window.location.search);
+    const parameter = urlParams.get('parameter');
+    // Logga vilken parameter denna sidan tog emot
+    console.log(parameter);
+    //Här kallar vi funktionen som jag skapade i app.js filen.
+    fetchMoviesDetailsAsync(parameter).then(function (data) {
+        // Logga objektet
+        console.log(data);
+        //För varje html med html ID
+        //Hämta elementet från html koden och spara den i const h2Title
+        //Ändra innerHTML till: Sig själv + det vi hämtat från api för den valda filmen
+        const h2Title = document.getElementById("title");
+        h2Title.innerHTML += data.Title;
+
+        const h2ImdbId = document.getElementById("imdbID");
+        h2ImdbId.innerHTML += data.imdbID;
+
+        const imgPoster = document.getElementById("poster");
+        poster.src = data.Poster;
+        poster.alt = "Film Poster";
+
+        const h2Year = document.getElementById("year");
+        h2Year.innerHTML += data.Year;
+
+        const h2Rated = document.getElementById("rated");
+        h2Rated.innerHTML += data.Rated;
+
+        const h2Released = document.getElementById("released");
+        h2Released.innerHTML += data.Released;
+
+        const h2Runtime = document.getElementById("runtime");
+        h2Runtime.innerHTML += data.Runtime;
+
+        const h2Genre = document.getElementById("genre");
+        h2Genre.innerHTML += data.Genre;
+
+        const h2Director = document.getElementById("director");
+        h2Director.innerHTML += data.Director;
+
+        const h2Writer = document.getElementById("writer");
+        h2Writer.innerHTML += data.Writer;
+
+        const h2Actors = document.getElementById("actors");
+        h2Actors.innerHTML += data.Actors;
+
+        const h2Plot = document.getElementById("plot");
+        h2Plot.innerHTML += data.Plot;
+
+        const h2Language = document.getElementById("language");
+        h2Language.innerHTML += data.Language;
+
+        const h2Country = document.getElementById("country");
+        h2Country.innerHTML += data.Country;
+
+        const h2Awards = document.getElementById("awards");
+        h2Awards.innerHTML += data.Awards;
+        //Ratings är en array så här hade man behövt göra en foreach eller for loop för att skriva ut innehållet
+        const h2imdbrating = document.getElementById("imdbRating");
+        h2imdbrating.innerHTML += data.imdbRating;
+
+
+
+        // Orkade inte göra allt för hand så botten fick göra resten så blev såhär då men funka likabra.
+        // Get the h2 elements
+
+    });;
+</script>
+
+</body>
+
+</html>

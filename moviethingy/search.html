@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/moviethingy/CSS/style.css">
+    <link rel="stylesheet" href="/moviethingy/CSS/search.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+</head>
+
+<body>
+
+    <header class="container header__container grid ">
+        <div class="header__div">
+            <a class="home__header header__detail" href="index.html">Home</a>
+            <a class="search__header header__detail" href="search.html">Search</a>
+            <a class="favourites__header header__detail" href="favourites.html">Favourites</a>
+        </div>
+
+
+    </header>
+
+    <main class="container main__container grid">
+
+        <h1>Search here:</h1>
+
+        <form>
+            <!-- <label for="inputField">Enter some text:</label><br> -->
+            <input class="input__search" type="text" id="inputField" name="inputField" placeholder="Search">
+            <button class="button__search" type="button" onclick="search()">Search now</button>
+        </form>
+
+        <div class="alert grid movie__container_movie" id="movieContainer"></div>
+        <!-- <div class="movie__button"></div> -->
+    </main>
+
+    <footer class="container footer__container grid ">
+
+
+
+    </footer>
+
+    <script src="/moviethingy/script.js"></script>
+    <script>
+        getFavoritesAsync()
+    </script>
+</body>
+
+</html>
+<!-- movie__container -->

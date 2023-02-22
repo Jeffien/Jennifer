@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/moviethingy/CSS/style.css">
+    <link rel="stylesheet" href="/moviethingy/CSS/favourites.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+</head>
+
+<body>
+
+
+    <header class="container header__container grid ">
+        <div class="header__div alert">
+            <a class="home__header header__detail" href="index.html">Home</a>
+            <a class="search__header header__detail" href="search.html">Search</a>
+            <a class="favourites__header header__detail" href="favourites.html">Favourites</a>
+        </div>
+
+
+    </header>
+
+    <main class="container main__container grid ">
+
+        <div class="note favourite__Container grid movie__container_movie"  id="favouriteContainer"></div>
+
+    </main>
+
+    <footer class="favouritesContainer footer__favouritesContainer grid ">
+
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        getBinData().then(data => {
+            App.listOfFavourites = data.record.FavoriteMovies;
+            console.log("Innehållet i App.listOfFavourites: ", App.listOfFavourites);
+            if (App.listOfFavourites.length > 0)
+                console.log("Nu har vi hämtat favoriter");
+
+            // const mainfavouritesContainer = document.createElement("div");
+            // mainfavouritesContainer.classList.add("mainfavouritesContainer");
+            App.listOfFavourites.forEach(film => {
+                console.log("Nu skapar vi html grejer för");
+
+
+                const favouritesContainer = document.createElement("div");
+                const title = document.createElement("h2");
+                const year = document.createElement("p");
+                // const pImdbId = document.createElement("p");
+                const img = document.createElement("img");
+                const removeButton = document.createElement("button");
+
+                favouritesContainer.classList.add("movie__container");
+                removeButton.classList.add("remove__heart")
+                img.classList.add("poster__main")
+                title.textContent = film.Title;
+                year.textContent = `Släppt år: ${film.Year}`;
+                // pImdbId.textContent = `IMDB ID: ${film.imdbID}`;
+                // removeButton.textContent = "Ta bort favorit";
+
+                img.src = film.Poster;
+
+                img.onclick = function () {
+                    window.location.href = "moviedetails.html?parameter=" + film.imdbID;
+                }
+
+                console.log("Nuvarande film titel", film.Title);
+                console.log("Arrayn för att hitta id", App.listOfFavourites);
+
+                favouritesContainer.append(
+                    img,
+                    title,
+                    year,
+                    removeButton
+                )
+                // favouritesContainer.appendChild(h2);
+                // favouritesContainer.appendChild(pYear);
+                // // favouritesContainer.appendChild(pImdbId);
+                // favouritesContainer.appendChild(img);
+                // favouritesContainer.appendChild(removeButton);
+                document.getElementById("favouriteContainer").appendChild(favouritesContainer);
+                // mainfavouritesContainer.appendChild(favouritesContainer)
+
+
+                let indexToRemove = App.listOfFavourites.findIndex(object => object.imdbID === film.imdbID);
+
+                console.log("FilmID", film.imdbID, "Index att ta bort", indexToRemove);
+
+                console.log("indexToRemove:", indexToRemove, " !== -1", indexToRemove !== -1);
+                if (indexToRemove === -1) {
+                    console.log("Ska vara alert. Filmen finns inte, konstigt..");
+                }
+
+                removeButton.onclick = function () {
+
+                    console.log("Favorites list innan borttagning: ", App.listOfFavourites);
+
+                    console.log("borttagna items:", App.listOfFavourites.splice(indexToRemove, 1));
+
+                    console.log("Favorites list efter borttagning: ", App.listOfFavourites);
+
+                    updateBin({ FavoriteMovies: App.listOfFavourites }).then(x => {
+                        window.location.reload();
+                    });
+                }
+            }
+            );
+            // document.body.appendChild(mainfavouritesContainer);
+        }
+        );
+    </script>
+
+</body>
+
+</html>

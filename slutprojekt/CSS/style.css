@@ -1,0 +1,370 @@
+body {
+    background: #4db8a0 url(/Assets/Logos/bonz.ai-logo-color-portrait-full.png) no-repeat fixed center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 
+.container-fluid {
+    margin: 7% 25%;
+} */
+
+/* .navbar-nav {
+    justify-content: right;
+} */
+
+.navbar {
+    background-color: transparent;
+    padding: 2% 5%;
+    font-size: 1.5rem;
+}
+
+.navbar-collapse {
+    position: static;
+}
+
+.nav-item {
+    margin: 1%;
+}
+
+.card {
+    margin: 1%;
+    background-color: rgba(40, 107, 85, 0.471);
+}
+
+.text-muted {
+    cursor: default;
+    padding-bottom: 2%;
+}
+
+.card-footer {
+    padding-bottom: 10%;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: -10%;
+}
+
+
+.btn-outline-light {
+    color: antiquewhite;
+    border-color: rgb(20, 129, 133);
+}
+
+.btn-outline-light:hover {
+    color: antiquewhite;
+    background-color: rgb(20, 129, 133);
+    border-color: antiquewhite;
+}
+
+.booking__carousel {
+    margin: 3%;
+}
+
+.toast__image {
+    height: 20px;
+}
+
+#information {
+    background: #bceee3ce;
+    padding: 5% 20%;
+
+}
+
+.info__carousel {
+    justify-content: center;
+}
+
+.reservation__heading {
+    padding: 1% 3%;
+    margin: 1% 3%;
+    margin-left: 20%;
+}
+
+.toast-container {
+    margin: 3% 3%;
+    padding: 3%;
+}
+
+.radio__container {
+    margin-top: 2%;
+}
+
+.frontpage__title {
+    text-align: center;
+    margin-top: 10%;
+}
+
+.frontpage__logo {
+    width: 50%;
+}
+
+.frontpage__text {
+    margin-top: 1%;
+}
+
+.frontpage__carousel {
+    margin-top: 2%;
+}
+
+
+/* #contact {
+    background: #bceee3ce;
+    padding: 5% 40%;
+} */
+
+/* .contact__form {
+    margin: 13%;
+    padding: 5%;
+} */
+
+.active__menu {
+    background-color: #4db8a0;
+}
+
+.nav-tabs {
+    background-color: #4db8a0;
+    border: none;
+}
+
+
+.nav-tabs:hover {
+    border: none;
+}
+
+ul .nav-tabs a {
+    background-color: #4db8a0;
+    color: aquamarine;
+}
+
+/* .button {
+    background-color: rgb(98, 207, 165) !important;
+    color: rgb(14, 39, 44) !important;
+} */
+
+p {
+    color: black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+    color: black !important;
+}
+
+.in__touch {
+    background-color: rgb(67, 202, 170) !important;
+}
+
+.ftco-section {
+    background-color: #bceee3ce;
+    padding: 5% 20%;
+    color: black !important;
+}
+
+.reservation {
+    padding: 5% 20%;
+}
+
+.front__page {
+    padding: 5% 20%;
+}
+
+/* 
+.footer__main {
+    display: flex;
+    flex-direction: row;
+    background: #29594ece;
+    padding: 5% 20%;
+    padding: 5%; 
+} */
+
+.logo__footer {
+    position: absolute;
+    left: 10%;
+    margin-right: 100%;
+}
+
+.socials__footer {
+    display: flex;
+    flex-direction: row;
+    /* margin-left: 100%; */
+    font-size: 36px;
+}
+
+.ftco-footer-social {
+    /* text-align: center; */
+    /* justify-content: center; */
+    font-size: 30px;
+}
+
+
+.ftco-footer-social li {
+    list-style: none;
+    margin: 0 10px 0 0;
+    display: inline-block;
+}
+
+.ftco-footer-social li a {
+    height: 40px;
+    width: 40px;
+    display: block;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    position: relative;
+}
+
+.ftco-footer-social li a .uil {
+    position: absolute;
+    font-size: 20px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.ftco-footer-social li a:hover {
+    color: #fff;
+}
+
+.form__2 {
+    height: 52px;
+    background: #fff;
+    color: #000;
+    font-size: 18px;
+    border-radius: 0px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 2%;
+    margin: 2%;
+}
+
+.form__2:focus,
+.form__2:active {
+    outline: none !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.ftco-animate {
+    cursor: pointer;
+}
+
+.footer-08 {
+    padding: 0;
+    overflow: hidden;
+    background: #29594ece;
+}
+
+.footer-08 a {
+    color: #12cc94;
+}
+
+.footer-08 p {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.footer-08 .footer-heading {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+    .footer-08 .footer-heading.footer-heading-white {
+        color: #fff;
+    }
+}
+
+.footer-08 ul.list-unstyled li a {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.footer-08 .contact-form {
+    width: 100%;
+}
+
+.footer-08 .contact-form .form-control {
+    height: 50px;
+    background: #fff;
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 14px;
+    border-radius: 5px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+}
+
+.footer-08 .contact-form .form-control::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: rgba(0, 0, 0, 0.3) !important;
+}
+
+.footer-08 .contact-form .form-control::-moz-placeholder {
+    /* Firefox 19+ */
+    color: rgba(0, 0, 0, 0.3) !important;
+}
+
+.footer-08 .contact-form .form-control:-ms-input-placeholder {
+    /* IE 10+ */
+    color: rgba(0, 0, 0, 0.3) !important;
+}
+
+.footer-08 .contact-form .form-control:-moz-placeholder {
+    /* Firefox 18- */
+    color: rgba(0, 0, 0, 0.3) !important;
+}
+
+.footer-08 .contact-form .form-control:focus {
+    outline: none !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.footer-08 .contact-form .form-control:focus,
+.footer-08 .contact-form .form-control:active {
+    outline: none !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.footer-08 .contact-form .submit {
+    background: #2f89fc !important;
+    color: #fff;
+}
+
+.footer-08 .contact-form textarea.form-control {
+    height: inherit !important;
+}
+
+
+@media (max-width: 767.98px) {
+    .footer-08 .aside-stretch-right {
+        background: transparent;
+    }
+
+    .footer-08 .aside-stretch-right:after {
+        background: transparent;
+        display: none;
+    }
+}
+
+.btn:hover {
+    background-color: #53c6ca;
+}
+
+.button__reservation {
+    background-color: #12cc94;
+    border: none;
+}
+

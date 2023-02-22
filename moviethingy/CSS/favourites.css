@@ -1,0 +1,15 @@
+:root {
+    --hue-color: 260;
+
+    --background-color: hsl(var(--hue-color), 25%, 80%);
+    --text-color: hsl(var(--hue-color), 40%, 40%);
+    --second-background: hsl(var(--hue-color), 80%, 80%);
+    --third-background: hsl(var(--hue-color), 30%, 65%);
+    --input-shadow: hsla(var(--hue-color), 100%, 25%, 0.3);
+    --input-shadow-2: hsla(var(--hue-color), 100%, 25%, 0.2);
+
+
+
+
+
+}

@@ -1,0 +1,157 @@
+a {
+    margin-top: 1%;
+    background-color: transparent;
+    color: antiquewhite;
+}
+
+.nav-tabs {
+    background-color: transparent;
+    color: antiquewhite;
+}
+
+.nav-tabs.active {
+    background-color: #3b9669;
+    color: antiquewhite;
+}
+
+.nav-item {
+    padding: 0;
+    margin: 1% 0 0;
+    color: antiquewhite;
+}
+
+.nav-link {
+    /* background-color: aquamarine; */
+    color: antiquewhite;
+}
+
+.nav-link:hover {
+    border: none;
+    color: antiquewhite;
+    transform: none;
+    transition: none;
+}
+
+.navbar-brand {
+    margin: 1% 10% 1% 1%;
+
+}
+
+.next__button {
+    position: absolute;
+    right: 10%;
+    bottom: 16%;
+    color: antiquewhite;
+
+}
+
+.prev__button {
+    position: absolute;
+    left: 10%;
+    bottom: 16%;
+    color: antiquewhite;
+}
+
+.btn:hover {
+    background-color: #53c6ca;
+}
+
+.customer__cards {
+    margin: 5% 20%;
+}
+
+.nav {
+    background-color: transparent;
+    color: antiquewhite;
+}
+
+#bookingForm {
+    margin-top: 25%;
+    padding: 15%;
+}
+
+
+.available__cabins {
+    margin: 5%;
+    /* padding: 5%; */
+}
+
+.navbar-toggler {
+    font-size: 20px;
+}
+
+
+/* .card{
+    width: 300px;
+    margin: ;
+} */
+
+.cabin__cards {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    margin: 16%;
+}
+
+.individual__cabin-card {
+    margin: 3% 0;
+    color: antiquewhite;
+}
+
+.list-group-item {
+    background-color: #5ebfe65d;
+    border: none;
+    color: antiquewhite;
+    padding: 3%;
+}
+
+.card-link {
+    color: antiquewhite;
+}
+
+.card-text {
+    color: antiquewhite;
+}
+
+.uil-check-circle {
+    color: rgb(7, 212, 92);
+    font-size: 25px;
+    position: absolute;
+    right: 5%;
+    bottom: 2%;
+}
+
+.uil-times-circle {
+    color: rgb(212, 31, 7);
+    font-size: 25px;
+    position: absolute;
+    right: 5%;
+    bottom: 2%;
+}
+
+.card__button {
+    display: flex;
+    justify-content: center;
+}
+
+/* .icon{
+    text-align: right;
+} */
+
+.calendar__container {
+    position: absolute;
+    top: 27%;
+    left: 33%;
+}
+
+
+@media (max-width: 1100px) {
+    .nav-item {
+        font-size: 20px;
+    }
+
+    .cabin__cards {
+        width: 50%;
+        margin: 5% 27%;
+    }
+}
